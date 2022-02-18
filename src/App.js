@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import MonthlyCalendarSimpleView from "./MonthlyCalendarSimpleView";
+import HorizontalWeeklySimpleCalendarView from "./HorizontalWeeklySimpleCalendarView";
+import VerticalWeeklySimpleCalendarView from "./VerticalWeeklySimpleCalendarView";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <div style={{
+            width: "80vw",
+            height: "45vh",
+            marginTop: "5vh",
+            marginLeft: "auto",
+            marginRight: "auto"
+        }}>
+            <MonthlyCalendarSimpleView year={2022} month={2} exact />
+        </div>
+        <div style={{
+            width: "80vw",
+            height: "45vh",
+            marginTop: "2.5vh",
+            marginLeft: "auto",
+            marginRight: "auto"
+        }}>
+            <HorizontalWeeklySimpleCalendarView year={2022} month={2} week={1} />
+        </div>
+        <div style={{
+            width: "80vw",
+            height: "45vh",
+            marginTop: "2.5vh",
+            marginBottom: "5vh",
+            marginLeft: "auto",
+            marginRight: "auto"
+        }}>
+            <VerticalWeeklySimpleCalendarView year={2022} month={2} week={1} />
+        </div>
+    </>
   );
 }
 
